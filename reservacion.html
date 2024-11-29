@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Reservación</title>
+    <link rel="stylesheet" href="estilos-reservacion.css">
+    <link rel="icon" href="logo1.jpg" type="image/x-icon">
+</head>
+
+<body>
+    <a href="index%20.html"><img src="hacia-atras.png" alt="Regresar"></a>
+
+    <div class="reservacion">
+        <h1>Reservación</h1>
+
+        <form action="">
+
+            <label for="personas">Número de personas:</label>
+
+            <div class="personas">
+                <input type="checkbox" id="check-personas" required>
+                <label for="check-personas" class="label-personas" id="total-personas">Haz clic para seleccionar</label>
+                <div class="selec-cantidad">
+                    <button onclick="seleccionarTexto(1)">1</button>
+                    <button onclick="seleccionarTexto(2)">2</button>
+                    <button onclick="seleccionarTexto(3)">3</button>
+                    <button onclick="seleccionarTexto(4)">4</button>
+                    <button onclick="seleccionarTexto(5)">5</button>
+                    <button onclick="seleccionarTexto(6)">6</button>
+                    <button onclick="seleccionarTexto(7)">7</button>
+                    <button onclick="seleccionarTexto(8)">8</button>
+                </div>
+            </div>
+
+            <div id="mensaje" class="mensaje">
+                <p>Reservación exitosa</p>
+                <button onclick="cerrarMensaje()">Cerrar</button>
+            </div>
+
+            <label for="">Selecione el dia:</label>
+            <input type="date" required>
+
+            <label for="">Selecione la hora:</label>
+            <input type="time" required>
+            <br>
+            <input type="button" value="Reservar" onclick="mostrarMensaje()">
+        </form>
+    </div>
+
+    <footer>
+        <div class="contacto" id="contacto">
+            <div class="acercade">
+                <h4>ACERCA DE NOSOTROS</h4>
+
+                <br>
+
+                <p>Nuestro restaurante es un lugar donde la</p>
+                <p>familia y los amigos pueden reunirse para</p>
+                <p>disfrutar de una comida deliciosa y una</p>
+                <p>excelente atención al servicio. Nuestro equipo</p>
+                <p>está comprometido con la calidad y la atención</p>
+                <p>al detalle, y nos esforzamos por crear una</p>
+                <p>experiencia que sea memorable para nuestros <br> clientes.</p>
+            </div>
+
+            <div class="contactanos">
+                <h4>CONTACTANOS</h4>
+                <br>
+                <ul>
+                    <li> <img src="gmail-logo.png" alt="Correo electrónico"> <a href="mailto:Elrinconfamiliar@gmail.com">Elrinconfamiliar@gmail.com</a> </li>
+                    <li> <img src="WhatsApp-logo.png" alt="Teléfono"> <a href="https://wa.me/+52 7891302468">7891302468</a> </li>
+                    <li> <img src="Ubicacion-logo.png" alt="Ubicación"> <a href="" target="_blank">Miguel Hidalgo y Costilla 158, Centro 92120 Tantoyuca, Ver.</a> </li>
+                </ul>
+            </div>
+            <div class="redes-sociales">
+                <h4>SIGUENOS EN NUESTRAS REDES SOCIALES</h4> <br>
+                <ul>
+                    <li>
+                        <a href="https://www.facebook.com" target="_blank"><img src="Facebook-logo.png" alt="Facebook"></a>
+                    </li>
+                    <li>
+                        <a href="" target="_blank"><img src="youtube-logo.png" alt="YouTube"></a>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank"><img src="Instagram-Logo.png" alt="Instagram"></a>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank"><img src="x-logo.png" alt="x"></a>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank"><img src="tik-tok-logo.png" alt="tik-tok"></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <br><br>
+        <div class="copy">
+            <p>&copy; El Rincon familiar | 2024</p>
+        </div>
+    </footer>
+
+</body>
+<script>
+    /*funcion script para recibir datos, en este caso los numeros*/
+    function seleccionarTexto(num) {
+        const label = document.getElementById('total-personas'); /*la constante label almacena los elementos dentro del id total-personas*/
+        label.textContent /*cambia el texto del label*/ = `${num} persona${num > 1 ? 's' : ''}`; /*si se seleciona una persona, recibe el numero y se pone en el label, si es mas de una se pregunta si el numero es mayor a 1 y pasa a la siguiente*/
+
+        document.getElementById('check-personas').checked = false; /*Esto hace que al desmarcar el checkbox cierre la lista*/
+    }
+
+    /*sirve para mostrar en mensaje*/
+    function mostrarMensaje() {
+        document.getElementById('mensaje').style.display = 'block'; /*añade un display block a lo que esta contenido en la id mensaje*/
+    }
+
+    /*sirve para cerrar el mensaje*/
+    function cerrarMensaje() {
+        document.getElementById('mensaje').style.display = 'none'; /*añade un display nones a lo que esta contenido en la id mensaje*/
+    }
+</script></html>

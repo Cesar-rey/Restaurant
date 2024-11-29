@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>El Rincón Familiar</title>
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="icon" href="logo1.jpg" type="image/x-icon">
+</head>
+
+<body>
+    <header>
+        <!--Icono de inicio-->
+        <div class="inicio">
+            <img src="icono-inicio.png">
+            <h1><a href="#Inicio">Inicio</a></h1>
+        </div>
+
+        <!--Seccion del menu-->
+
+        <input type="checkbox" id="menu-desplegable">
+        <label for="menu-desplegable" class="icono-menu">
+            <img src="menu.png" alt="Icono del menú">
+        </label>
+
+        <nav class="menu">
+            <img src="logo.jpg" alt="Logo">
+            <ul>
+
+                <div class="iconos-menu">
+                    <a href="#Historia">
+                        <li><img src="icono-historia.png" alt="">Historia</li>
+                    </a>
+                    <a href="menu.html">
+                        <li><img src="icono-menu.png" alt="">Menú</li>
+                    </a>
+                    <a href="reservacion.html">
+                        <li><img src="icono-reservacion.png" alt="">Reservacion</li>
+                    </a>
+                    <a href="#Ubicacion">
+                        <li><img src="icono-ubicacion.png" alt="">Ubicacion</li>
+                    </a>
+                    <a href="#Reseñas">
+                        <li><img src="icono-rese%C3%B1as.png" alt="">Reseñas</li>
+                    </a>
+                    <a href="#Contacto">
+                        <li><img src="icono-contacto.png" alt="">Contacto</li>
+                    </a>
+                </div>
+            </ul>
+        </nav>
+
+        <label for="menu-desplegable" class="salir-menu"></label>
+        <!--Este label se ocupara como fondo para que al momento de que se clickee dentro salga del menu desplegable-->
+    </header>
+
+    <main>
+        <!--Presentacion-->
+        <div id="Inicio" class="presentacion">
+            <img src="logo1.jpg">
+            <h1>"EL RINCÓN FAMILIAR"</h1>
+            <h3>"Compartiendo momentos, disfrutando sabores."</h3>
+        </div>
+
+        <div class="seccion-historia" id="Historia">
+            <h1>Historia del restaurante</h1>
+            <p>"El Rincón Familiar" es un pequeño restaurante que comenzó como un sueño sencillo, pero lleno de amor por la buena comida
+                y el deseo de unir a las personas a través de los sabores. Su historia se remonta a más de tres décadas atrás, en un pintoresco pueblo
+                donde la tradición culinaria se transmite de generación en generación.
+                A medida que pasaron los años, el restaurante creció. El ambiente del local, que al principio era modesto y sencillo, fue transformándose.
+                Se agregaron más mesas, se mejoraron los detalles en la decoración, pero siempre manteniendo el espíritu acogedor y familiar que caracterizaba
+                al lugar. El menú sigue siendo el mismo de siempre: platos que reflejan la cultura y la historia del pueblo, con recetas que han sido
+                perfeccionadas a lo largo de los años. Pero además, el restaurante ha incorporado algunas opciones más modernas para atraer a una nueva
+                generación de comensales, sin perder su esencia familiar.
+                Este establecimiento no es solo un restaurante, es un pedazo de historia viviente, una parte de la vida de las personas que han pasado por allí,
+                una memoria que se sigue construyendo cada vez que se sirve un plato y se da la bienvenida a un nuevo cliente.</p>
+        </div>
+        <!--Ubicacion-->
+        <div class="seccion-ubicacion" id="Ubicacion">
+            <h1 class="titulo-ubicacion">Ubicación</h1>
+            <section class="info-ubicacion">
+                <h1>El Rincon Familiar</h1>
+                <h3>Ubicacion:</h3>
+                <p>Miguel Hidalgo y Costilla 158, Centro</p>
+                <p>92120 Tantoyuca, Ver.</p>
+            </section>
+
+            <div class="carrusel">
+                <ul>
+                    <img src="Ubicacion4.png" alt="Ubicacion1">
+                    <img src="Ubicacion3.png" alt="Ubicacion2">
+                    <img src="Ubicacion2.png" alt="Ubicacion3">
+                    <img src="Ubicacion1.png" alt="Ubicacion4">
+                </ul>
+            </div>
+
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d232.24882916238542!2d-98.2270606426908!3d21.351234136369975!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d7170022ce1571%3A0x67698256112fc5d1!2sEl%20Rinc%C3%B3n%20Familiar!5e0!3m2!1ses!2smx!4v1732762990155!5m2!1ses!2smx" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+
+        <div class="seccion-reseñas" id="Reseñas">
+            <h1>Reseñas</h1>
+            <div class="formulario">
+                <form action="" id="formulario">
+                    <h3>Agrega tu comentario</h3>
+                    <label>Escribe tu nombre:</label>
+                    <br>
+                    <input type="text" class="input1" placeholder="Escribe aqui...">
+                    <br>
+                    <label>Escribe tu opinión:</label>
+                    <br>
+                    <input type="text" class="input2" placeholder="Escribe aqui...">
+
+                    <div class="calificar">
+                        <input type="radio" id="estrella5" name="calificar" value="5">
+                        <label for="estrella5">&#9733;</label>
+                        <input type="radio" id="estrella4" name="calificar" value="4">
+                        <label for="estrella4">&#9733;</label>
+                        <input type="radio" id="estrella3" name="calificar" value="3">
+                        <label for="estrella3">&#9733;</label>
+                        <input type="radio" id="estrella2" name="calificar" value="2">
+                        <label for="estrella2">&#9733;</label>
+                        <input type="radio" id="estrella1" name="calificar" value="1">
+                        <label for="estrella1">&#9733;</label>
+                    </div>
+
+                    <button id="boton">Envia comentario</button>
+
+                    <div class="enviado">
+                        <p>Comentario enviado con exito</p>
+                    </div>
+                </form>
+            </div>
+
+            <section class="reseñas">
+                <img src="icono-usuario.png" alt="Icono usuario">
+                <h3>Victor Morales</h3>
+                <p>Muy buen restaurante, la comida es genial, la pase muy bien con mis amigos, recomendado!👍</p>
+                <p>⭐⭐⭐⭐⭐</p>
+            </section>
+            <section class="reseñas">
+                <img src="icono-usuario.png" alt="Icono usuario">
+                <h3>Laura Pérez</h3>
+                <p>El ambiente del lugar es muy acogedor, la atención al cliente es excelente y los platillos son exquisitos. Definitivamente un sitio para volver una y otra vez. La comida es fresca y bien presentada. Sin duda, uno de mis lugares favoritos. ¡No se lo pueden perder!</p>
+                <p>⭐⭐⭐⭐</p>
+            </section>
+
+            <section class="reseñas">
+                <img src="icono-usuario.png" alt="Icono usuario">
+                <h3>Carlos García</h3>
+                <p>Un lugar increíble, con una decoración moderna y atractiva. Los platillos tienen una mezcla de sabores únicos que sorprenden a cada bocado. La atención es muy buena, aunque el servicio en hora punta podría mejorar un poco. A pesar de eso, la experiencia fue excelente.</p>
+                <p>⭐⭐⭐⭐</p>
+            </section>
+
+            <section class="reseñas">
+                <img src="icono-usuario.png" alt="Icono usuario">
+                <h3>Ana López</h3>
+                <p>¡Maravilloso! Desde que llegamos nos atendieron muy amablemente, el menú tiene muchas opciones deliciosas y el sabor es espectacular. Me encantó la variedad de postres, ¡no pude elegir solo uno! Muy recomendable para una cena con amigos o una salida romántica.</p>
+                <p>⭐⭐⭐⭐⭐</p>
+            </section>
+
+            <section class="reseñas">
+                <img src="icono-usuario.png" alt="Icono usuario">
+                <h3>David Rodríguez</h3>
+                <p>Un restaurante con una propuesta culinaria diferente y deliciosa. La calidad de los ingredientes es insuperable, y los platos son tan sabrosos como visualmente atractivos. El único detalle es que los precios son un poco elevados, pero vale cada centavo por la experiencia que ofrece.</p>
+                <p>⭐⭐⭐⭐</p>
+            </section>
+
+            <section class="reseñas">
+                <img src="icono-usuario.png" alt="Icono usuario">
+                <h3>Maria González</h3>
+                <p>Excelente lugar para disfrutar de una comida tranquila y bien preparada. El servicio es excepcional, el personal es muy atento y nos recomendó varios platillos que realmente valieron la pena. Los sabores son ricos, y la presentación de cada plato es impecable. Sin duda volveré muy pronto.</p>
+                <p>⭐⭐⭐⭐⭐</p>
+            </section>
+
+        </div>
+    </main>
+
+    <footer>
+        <div class="contacto" id="Contacto">
+            <div>
+                <h4>ACERCA DE NOSOTROS</h4>
+
+                <br>
+
+                <p>Nuestro restaurante es un lugar donde la</p>
+                <p>familia y los amigos pueden reunirse para</p>
+                <p>disfrutar de una comida deliciosa y una</p>
+                <p>excelente atención al servicio. Nuestro equipo</p>
+                <p>está comprometido con la calidad y la atención</p>
+                <p>al detalle, y nos esforzamos por crear una</p>
+                <p>experiencia que sea memorable para nuestros <br> clientes.</p>
+            </div>
+
+            <div class="contactanos">
+                <h4>CONTACTANOS</h4>
+                <br>
+                <ul>
+                    <li> <img src="gmail-logo.png" alt="Correo electrónico"> <a href="mailto:Elrinconfamiliar@gmail.com">Elrinconfamiliar@gmail.com</a> </li>
+                    <li> <img src="WhatsApp-logo.png" alt="Teléfono"> <a href="https://wa.me/+52 7891302468">7891302468</a> </li>
+                    <li> <img src="Ubicacion-logo.png" alt="Ubicación"> <a href="" target="_blank">Miguel Hidalgo y Costilla 158, Centro 92120 Tantoyuca, Ver.</a> </li>
+                </ul>
+            </div>
+            <div class="redes-sociales">
+                <h4>SIGUENOS EN NUESTRAS REDES SOCIALES</h4> <br>
+                <ul>
+                    <li>
+                        <a href="https://www.facebook.com" target="_blank"><img src="Facebook-logo.png" alt="Facebook"></a>
+                    </li>
+                    <li>
+                        <a href="" target="_blank"><img src="youtube-logo.png" alt="YouTube"></a>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank"><img src="Instagram-Logo.png" alt="Instagram"></a>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank"><img src="x-logo.png" alt="x"></a>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank"><img src="tik-tok-logo.png" alt="tik-tok"></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <br><br>
+        <div class="copy">
+            <p>&copy; El Rincon familiar | 2024</p>
+        </div>
+    </footer>
+</body>
+<script>
+    /*este scrip hace que no se recarge la pagina al oprimir el boton del formulario*/
+    document.getElementById('boton') /*primero llama al elemento con el id boton*/ .addEventListener /*añade un evento a este elemento*/('click', function(event) {
+        event.preventDefault(); /*evita que se recarge la pagina al realizar el evento de click*/
+
+        const formulario = document.getElementById('formulario');
+        formulario.reset(); // Resetea todos los campos del formulario
+    });
+</script></html>

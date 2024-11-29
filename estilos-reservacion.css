@@ -1,0 +1,263 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+a img {
+    width: 50px;
+}
+
+.reservacion {
+    background-image: url(fondo-reservacion.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    width: 700px;
+    height: 500px;
+    margin: auto;
+    border-radius: 5%;
+}
+
+.reservacion h1 {
+    text-align: center;
+    color: white;
+    padding: 20px;
+}
+
+form {
+    text-align: center;
+    padding: 20px;
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+    color: white;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.personas {
+    position: relative;
+    display: inline-block;
+    max-width: 200px;
+}
+
+.personas input[type="checkbox"] {
+    display: none;
+}
+
+.label-personas {
+    font-weight: normal;
+    font-size: 15px;
+    display: block;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #fff;
+    text-align: center;
+    color: black;
+}
+
+.selec-cantidad {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    z-index: 10;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.selec-cantidad button {
+    width: 100%;
+    padding: 10px;
+    text-align: left;
+    border: none;
+    background: #f9f9f9;
+    cursor: pointer;
+}
+
+.selec-cantidad button:hover {
+    background-color: #e6e6e6;
+}
+
+.personas input[type="checkbox"]:checked ~ .selec-cantidad {
+    display: block;
+}
+
+input[type="date"],
+[type="time"] {
+    font-weight: normal;
+    font-size: 15px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+}
+
+input[type="button"] {
+    margin-top: 20px;
+    padding: 10px;
+    font-weight: normal;
+    font-size: 15px;
+    border-radius: 5px;
+    background-color: #ebdf7d;
+    border: 1px solid #ccc;
+    cursor: pointer;
+}
+input[type="button"]:hover { 
+    background-color: #f8f892;
+}
+.mensaje {
+    display: none;
+    border: 1px solid ;
+    border-radius: 10px;
+    background-color: #ebdf7d;
+    padding: 20px;
+    margin-top: 20px;
+    color: white;
+    font-weight: 600;
+    position: absolute;
+    left: 43%;
+}
+.mensaje button {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.29);
+}
+/*estilo para el pie de pagina*/
+footer {
+    margin-top: 30px;
+	background-color: #ebdf7d;
+	color: #fff;
+	padding:0%;
+	text-align: center;
+	bottom: 0;
+	width: 100%;
+	left: 0;
+	right: 0;
+    justify-content: center;
+}
+ footer h4 {
+    padding: 0px;
+	font-family: 'Pacifico';
+	font-size: 20px;
+	color: #fff;
+    margin-bottom: 10px;
+
+}
+.contacto {
+	display: flex;
+	flex-wrap: wrap;
+}
+.contacto p {
+    margin-left: 10px;
+    padding: 0;
+}
+.acercade {
+    margin-left: 50px;
+}
+.contactanos {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+    margin-left: 50px;
+}
+.contactanos ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+.contactanos ul li {
+	display: flex;
+	align-items: center;
+	margin-bottom: 20px;
+}
+.contactanos img{
+    width: 30px;
+	height: 30px;
+	margin-right: 10px;
+}
+
+.contactanos ul li a {
+	text-decoration: none;
+	color: #fff;
+	font-size: 16px;
+	font-weight: bold;
+}
+.contactanos ul li a:hover {
+	color: rgb(0,0,0,0.79);
+}
+.redes-sociales {
+    margin-left: 50px;
+}
+.redes-sociales img {
+	width: 30px;
+	height: 30px;
+	margin-right: 10px;
+	border-radius: 50%;
+	transition: width 0.5s, height 0.5s, transform 0.5s;
+}
+.redes-sociales img:hover {
+	box-shadow: 0 0 26px #ff000a;
+	transform: scale(1.5);
+}
+.redes-sociales ul li {
+	display: inline-block;
+	margin-right: 20px;
+}
+.redes-sociales ul li:last-child {
+	margin-right: 25;
+}
+.copy {
+	width: 100%;
+	clear: both;
+	text-align: center;
+	background-color:#ff8800 ;
+	color: #fff;
+    margin-top: 0px;
+}
+/*Estilos Responsive*/
+/*Responsive para telefono*/
+@media (max-width: 580px){
+    a img {
+        width: 25px;
+        position: absolute;
+    }
+    .reservacion {
+        margin: auto;
+        width: 310px;
+        left: 0;
+        right: 0;
+    }
+    h1{
+        font-size: 30px;
+    }
+    label{
+        font-weight: normal;
+    }
+    input[type="date"],
+    [type="time"] {
+        font-weight: normal;
+    }
+    footer {
+        margin: auto;
+    }
+    .contacto {
+        margin-left: -30px;
+    }
+    .contacto h4 {
+        font-size: 20px;
+    }
+    .acercade{
+        display: none;
+    }
+    .redes-sociales img {
+        margin-left: -45px;
+    }
+}
+

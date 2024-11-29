@@ -1,0 +1,716 @@
+.menu {
+    background-image: url(fondo-menu.jpg);
+    width: 250px;
+    height: 100%;
+    position: fixed;
+    z-index: 1000;
+}
+.menu a li {
+    list-style: none;
+    margin-left: 15px;
+}
+.menu a {
+    text-decoration: none;
+    padding: 10px;
+    font-size: 20px;
+    color: #ebdf7d;
+    font-weight: 700;
+    font-size: 25px;
+}
+.menu li:hover {
+    color: rgba(224, 206, 56, 0.81);
+}
+/*Estilos para el icono de inicio*/
+.inicio {
+    display: inline-flex;
+    margin-top: 20px;
+    margin-left: 15px;
+}
+.inicio img {
+    border-radius: 50%;
+    margin-top: -10px;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+}
+.inicio a {
+    text-decoration: none;
+    font-family: monospace;
+    color: #ebdf7d;
+    font-size: 30px;
+}
+.inicio h1 {
+    margin-top: 0px;
+}
+/*estilos para la seccion menu*/
+.seccion-menu {
+    height: 3690px;
+    box-shadow: 2px 2px 5px rgb(0,0,0.9);
+    margin-left: 260px;
+}
+.seccion-menu h1 {
+    padding: 10px;
+    text-align: center;
+    font-family: fantasy;
+    font-size: 35px;
+}
+/*Estilos secciones en general*/
+.secciones {
+    padding: 10px;
+    margin-left: 20px;
+    margin-top: 10px;
+    margin-right: 20px;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    box-shadow: 10px 10px 5px rgb(0,0,0,0.7);
+}
+.titulo /*Titulos generales*/{
+    position: absolute;
+    margin-bottom: 30px;
+    color: white;
+    font-size: 25px;
+    margin-top: -20px;
+}
+/*Estilos de todos los platillos*/
+.platillo {
+    margin-left: 30px;
+    cursor: pointer;
+    background-color:white;
+    padding: 10px;
+    margin-top: 50px;
+    width: 230px;
+    height: 220px;
+    box-shadow: 2px 2px 5px rgb(0,0,0.9);
+}
+.platillo img {
+    width: 220px;
+    height: 180px;
+    margin-left: 5px;
+    border-radius: 5%;
+}
+.platillo h4{
+    margin-left: 15px;
+}
+.platillo h4 p {
+    margin-left: 180px;
+    margin-top: -18px;
+}
+
+.icono-info img {
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    margin-left: 190px;
+    margin-top: -180px;
+}
+.info /*estilos generales de todos los div class info*/{
+    color: white;
+    padding: 0px 10px;
+    text-align: center;
+    margin-top: 45px;
+    margin-left: 10px;
+    margin-right: -20px;
+    height: auto;
+    display: none;/*tampoco se mostrara*/
+    background-color: rgba(0, 0, 0, 0.29);
+    border-radius: 5%;
+}
+.info li {
+    list-style: none;
+    text-align: start;
+}
+
+/*Estilos para los platillos*/
+.platillos {
+    background-image: url(fondo-platillos.jpg);
+    background-color: 
+}
+
+/*checkbox del platillo 1*/
+#pla-oprimir {
+    display: none;
+}
+#pla-oprimir:checked + .pla-click + .p1 {
+    display: block;
+}
+/*checkbox del platillo 2*/
+#pla-oprimir2 {
+    display: none;
+}
+
+#pla-oprimir2:checked + .pla-click2 + .p2 {
+    display: block;
+}
+/*checkbox del platillo 3*/
+#pla-oprimir3 {
+    display: none;
+}
+
+#pla-oprimir3:checked + .pla-click3 + .p3 {
+    display: block;
+}
+/*checkbox del platillo 4*/
+#pla-oprimir4 {
+    display: none;
+}
+
+#pla-oprimir4:checked + .pla-click4 + .p4 {
+    display: block;
+}
+
+/*Estilos desayuno*/
+.desayunos {
+    background-image: url(fondo-desayuno.jpg);
+    margin-top: 50px;
+}
+/*chackbox del desayuno 1*/
+#des-oprimir {
+    display: none;
+}
+#des-oprimir:checked + .des-click + .d1 {
+    display: block;
+}
+/*checkbox del desayuno 2*/
+#des-oprimir2 {
+    display: none;
+}
+
+#des-oprimir2:checked + .des-click2 + .d2 {
+    display: block;
+}
+/*checkbox del desayuno 3*/
+#des-oprimir3 {
+    display: none;
+}
+
+#des-oprimir3:checked + .des-click3 + .d3 {
+    display: block;
+}
+/*checkbox del desayuno 4*/
+#des-oprimir4 {
+    display: none;
+}
+#des-oprimir4:checked + .des-click4 + .d4 {
+    display: block;
+}
+/*checkbox del desayuno 5*/
+#des-oprimir5 {
+    display: none;
+}
+#des-oprimir5:checked + .des-click5 + .d5 {
+    display: block;
+}
+/*checkbox del desayuno 6*/
+#des-oprimir6 {
+    display: none;
+}
+
+#des-oprimir6:checked + .des-click6 + .d6 {
+    display: block;
+}
+/*checkbox del desayuno 7*/
+#des-oprimir7 {
+    display: none;
+}
+
+#des-oprimir7:checked + .des-click7 + .d7 {
+    display: block;
+}
+/*checkbox del desayuno 8*/
+#des-oprimir8 {
+    display: none;
+}
+
+#des-oprimir8:checked + .des-click8 + .d8 {
+    display: block;
+}
+
+/*Estilos para las comidas*/
+.comidas {
+    background-image: url(fondo-comida.jpg);
+    margin-top: 50px;
+}
+/*chackbox del comida 1*/
+#com-oprimir {
+    display: none;
+}
+#com-oprimir:checked + .com-click + .c1 {
+    display: block;
+}
+/*checkbox del comida 2*/
+#com-oprimir2 {
+    display: none;
+}
+
+#com-oprimir2:checked + .com-click2 + .c2 {
+    display: block;
+}
+/*checkbox del comida 3*/
+#com-oprimir3 {
+    display: none;
+}
+
+#com-oprimir3:checked + .com-click3 + .c3 {
+    display: block;
+}
+/*checkbox del comida 4*/
+#com-oprimir4 {
+    display: none;
+}
+
+#com-oprimir4:checked + .com-click4 + .c4 {
+    display: block;
+}
+/*checkbox del comida 5*/
+#com-oprimir5 {
+    display: none;
+}
+#com-oprimir5:checked + .com-click5 + .c5 {
+    display: block;
+}
+/*checkbox del comida 6*/
+#com-oprimir6 {
+    display: none;
+}
+
+#com-oprimir6:checked + .com-click6 + .c6 {
+    display: block;
+}
+/*checkbox del comida 7*/
+#com-oprimir7 {
+    display: none;
+}
+
+#com-oprimir7:checked + .com-click7 + .c7 {
+    display: block;
+}
+/*checkbox del comida 8*/
+#com-oprimir8 {
+    display: none;
+}
+#com-oprimir8:checked + .com-click8 + .c8 {
+    display: block;
+}
+/*Estilos para cena*/
+.cenas {
+    background-image: url(fondo-cena.jpg);
+    margin-top: 50px;
+}
+/*chackbox del cena 1*/
+#cen-oprimir {
+    display: none;
+}
+#cen-oprimir:checked + .cen-click + .ce1 {
+    display: block;
+}
+/*checkbox del cena 2*/
+#cen-oprimir2 {
+    display: none;
+}
+
+#cen-oprimir2:checked + .cen-click2 + .ce2 {
+    display: block;
+}
+/*checkbox del cena 3*/
+#cen-oprimir3 {
+    display: none;
+}
+
+#cen-oprimir3:checked + .cen-click3 + .ce3 {
+    display: block;
+}
+/*checkbox del cena 4*/
+#cen-oprimir4 {
+    display: none;
+}
+
+#cen-oprimir4:checked + .cen-click4 + .ce4 {
+    display: block;
+}
+/*chackbox del cena 5*/
+#cen-oprimir5 {
+    display: none;
+}
+#cen-oprimir5:checked + .cen-click5 + .ce5 {
+    display: block;
+}
+/*checkbox del cena 6*/
+#cen-oprimir6 {
+    display: none;
+}
+
+#cen-oprimir6:checked + .cen-click6 + .ce6 {
+    display: block;
+}
+/*checkbox del cena 7*/
+#cen-oprimir7 {
+    display: none;
+}
+
+#cen-oprimir7:checked + .cen-click7 + .ce7 {
+    display: block;
+}
+/*checkbox del cena 8*/
+#cen-oprimir8 {
+    display: none;
+}
+
+#cen-oprimir8:checked + .cen-click8 + .ce8 {
+    display: block;
+}
+
+/*Estilos para bebidas*/
+.bebidas {
+    background-image: url(fondo-bebidas.jpg);
+    margin-top: 50px;
+}
+/*chackbox del bebidas 1*/
+#beb-oprimir {
+    display: none;
+}
+#beb-oprimir:checked + .beb-click + .b1 {
+    display: block;
+}
+/*checkbox del bebidas 2*/
+#beb-oprimir2 {
+    display: none;
+}
+
+#beb-oprimir2:checked + .beb-click2 + .b2 {
+    display: block;
+}
+/*checkbox del bebidas 3*/
+#beb-oprimir3 {
+    display: none;
+}
+
+#beb-oprimir3:checked + .beb-click3 + .b3 {
+    display: block;
+}
+/*checkbox del bebidas 4*/
+#beb-oprimir4 {
+    display: none;
+}
+
+#beb-oprimir4:checked + .beb-click4 + .b4 {
+    display: block;
+}
+/*chackbox del bebidas 5*/
+#beb-oprimir5 {
+    display: none;
+}
+#beb-oprimir5:checked + .beb-click5 + .b5 {
+    display: block;
+}
+/*checkbox del bebidas 6*/
+#beb-oprimir6 {
+    display: none;
+}
+
+#beb-oprimir6:checked + .beb-click6 + .b6 {
+    display: block;
+}
+/*checkbox del bebidas 7*/
+#beb-oprimir7 {
+    display: none;
+}
+
+#beb-oprimir7:checked + .beb-click7 + .b7 {
+    display: block;
+}
+/*checkbox del bebidas 8*/
+#beb-oprimir8 {
+    display: none;
+}
+
+#beb-oprimir8:checked + .beb-click8 + .b8 {
+    display: block;
+}
+
+/*Estilos para los postres*/
+.postres {
+    margin-top: 50px;
+    background-image: url(fondo-postres.jpg);
+    margin-bottom: 50px;
+}
+
+/*checkbox del postres 1*/
+#pos-oprimir {
+    display: none;
+}
+#pos-oprimir:checked + .pos-click + .po1 {
+    display: block;
+}
+/*checkbox del postres 2*/
+#pos-oprimir2 {
+    display: none;
+}
+
+#pos-oprimir2:checked + .pos-click2 + .po2 {
+    display: block;
+}
+/*checkbox del postres 3*/
+#pos-oprimir3 {
+    display: none;
+}
+
+#pos-oprimir3:checked + .pos-click3 + .po3 {
+    display: block;
+}
+/*checkbox del postres 4*/
+#pos-oprimir4 {
+    display: none;
+}
+
+#pos-oprimir4:checked + .pos-click4 + .po4 {
+    display: block;
+}
+/*checkbox del postres 5*/
+#pos-oprimir5 {
+    display: none;
+}
+
+#pos-oprimir5:checked + .pos-click5 + .po5 {
+    display: block;
+}
+/*checkbox del postres 6*/
+#pos-oprimir6 {
+    display: none;
+}
+#pos-oprimir6:checked + .pos-click6 + .po6 {
+    display: block;
+}
+/*checkbox del postres 7*/
+#pos-oprimir7 {
+    display: none;
+}
+
+#pos-oprimir7:checked + .pos-click7 + .po7 {
+    display: block;
+}
+/*checkbox del postres 8*/
+#pos-oprimir8 {
+    display: none;
+}
+#pos-oprimir8:checked + .pos-click8 + .po8 {
+    display: block;
+}
+/*estilo para el pie de pagina*/
+footer {
+    margin-left: 250px;
+    margin-top: 30px;
+	background-color: #ebdf7d;
+	color: #fff;
+	padding:0%;
+	text-align: center;
+	bottom: 0;
+	width: 100%;
+	left: 0;
+	right: 0;
+}
+ footer h4 {
+    padding: 0px;
+	font-family: 'Pacifico';
+	font-size: 20px;
+	color: #fff;
+     margin-bottom: 10px;
+
+}
+.contacto {
+	display: flex;
+	flex-wrap: wrap;
+	margin-left: 30px;
+}
+.contacto p {
+    margin-left: 10px;
+    padding: 0;
+}
+.contactanos {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+    margin-left: 50px;
+}
+.contactanos ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+.contactanos ul li {
+	display: flex;
+	align-items: center;
+	margin-bottom: 20px;
+}
+.contactanos img{
+    width: 30px;
+	height: 30px;
+	margin-right: 10px;
+}
+
+.contactanos ul li a {
+	text-decoration: none;
+	color: #fff;
+	font-size: 16px;
+	font-weight: bold;
+}
+.contactanos ul li a:hover {
+	color: rgb(0,0,0,0.79);
+}
+.redes-sociales {
+    margin-left: 50px;
+}
+.redes-sociales img {
+	width: 30px;
+	height: 30px;
+	margin-right: 10px;
+	border-radius: 50%;
+	transition: width 0.5s, height 0.5s, transform 0.5s;
+}
+.redes-sociales img:hover {
+	box-shadow: 0 0 26px #ff000a;
+	transform: scale(1.5);
+}
+.redes-sociales ul li {
+	display: inline-block;
+	margin-right: 20px;
+}
+.redes-sociales ul li:last-child {
+	margin-right: 25;
+}
+.copy {
+	width: 100%;
+	clear: both;
+	text-align: center;
+	background-color:#ff8800 ;
+	color: #fff;
+}
+
+
+
+/*Formatos responsive*/
+
+/*Responsive tablet*/
+@media (min-width: 768px) and (max-width: 1024px) {
+    .menu {
+        width: 25%;
+        height: 100hv;
+        position: fixed;
+    }
+    .seccion-menu {
+        margin-left: 26%;
+        height: auto;
+    }
+    
+    .secciones {
+        flex-direction: row;
+        align-items: center;
+        overflow-x: scroll;
+    }
+    .titulo{
+        margin-bottom: 500px;
+    }
+    .titulo2{
+        margin-bottom: 1100px;
+    }
+    .platillo1 {
+        margin-left: 650px;
+    }
+    .platillo {
+        margin-left: 30px;
+    }
+    footer {
+        width: auto;
+    }
+    .acercade {
+        display: none;
+    }
+}
+/*responsive de telefono*/
+@media (max-width: 580px) {
+    .menu {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+    .seccion-menu {
+        margin-left: 0;
+        justify-items: center;
+        height: 4400px;
+    }
+    .inicio {
+        margin-left: 35%;
+    }
+    .inicio h1 {
+        font-size: 20px;
+    }
+    .titulo{
+        margin-bottom: 590px;
+    }
+    .secciones {
+        display: flex;
+        flex-wrap: nowrap;
+        width: 70%;
+        height: 650px;
+        flex-direction: column;
+        align-items: center;
+        overflow-x: scroll;
+    }
+    .platillo, .unico {
+        width: 276px;
+    }
+    .unico{
+       margin-top: 550px;
+    }
+    .unicos{
+       margin-top: 1700px;
+    }
+    .platillo {
+        margin-left: 6px;
+        
+    }
+    .platillo img {
+        width: 268px;
+    }
+    .icono-info img {
+        margin-left: 230px;
+        width: 25px;
+        height: 25px;
+    }
+    .info{
+        margin-top: 0px;
+        z-index: 350px;
+    }
+    @keyframes show {
+        from {
+            opacity: 0;
+            scale: 25%;
+        }
+        to {
+            opacity: 1;
+            scale:100%;
+        }
+    }
+    .secciones section{
+        view-timeline-name: --section;
+        view-timeline-axis: block;
+        
+        animation-timeline: --section;
+        animation-name: show;
+        
+        animation-range: entry 25% cover 50%; 
+        animation-fill-mode: both;
+    }
+    footer {
+        width: auto;
+        margin-left: 0;
+        left: 0;
+    }
+    .contacto {
+        margin-left: -40px;
+    }
+    .acercade {
+        display: none;
+    }
+}

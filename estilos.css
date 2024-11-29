@@ -1,0 +1,708 @@
+/*Estilos generales*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family:  Arial, sans-serif;
+}
+
+/*Estilos para el header*/
+header {
+    margin: 0px;
+    height: 90px;
+    position: fixed;
+    width: 100%;
+    /*box-shadow: 5px 5px 4px rgba(255, 255, 255, 0.1);*/
+
+}
+
+/*Estilos para el icono de inicio*/
+.inicio {
+    display: inline-flex;
+    margin-top: 20px;
+    margin-left: 15px;
+}
+
+.inicio img {
+    border-radius: 50%;
+    margin-top: -10px;
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+}
+
+.inicio a {
+    text-decoration: none;
+    font-family: monospace;
+    color: #ebdf7d;
+    margin-left: 15px;
+    font-size: 45px;
+}
+
+/*Estilos para el icono del menú en el lado derecho*/
+#menu-desplegable/*checkbox*/{
+    display: none;
+}
+
+.icono-menu {
+    position: absolute;
+    /*Posicion absoluta*/
+    top: 15px;
+    right: 15px;
+    cursor: pointer;
+}
+
+.icono-menu img {
+    width: 70px;
+    height: 60px;
+    margin-right: 15px;
+}
+
+/*Estilos del menú desplegable*/
+.menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 600px;
+    /*600 pixeles de ancho*/
+    height: 100vh;
+    background-color: #ebdf7d;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+    /*Borde sombreado*/
+    transform: translateX(100%);
+    /*estara transladado hacia el eje x 100%, y no se mostrara*/
+    transition: transform 0.3s ease;
+    /*Muestra una animacion al aparecer el menu*/
+    padding: 20px;
+    z-index: 1000;
+    /*Indica que se mostrara encima del contenido*/
+}
+
+/*Estilos para el logo*/
+.menu img {
+    border-radius: 50%;
+    width: 130px;
+    margin-left: 40%;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+/*Estilos para los iconos del menu*/
+.iconos-menu img {
+    width: 35px;
+    border-radius: 0%;
+    margin-right: 15px;
+    margin-left: 0;
+}
+
+#menu-desplegable:checked + .icono-menu + .menu {
+    transform: translateX(0);
+    /*Indica que cuando el checkbox este activo se trasladara hacia el eje x al 0% asea que se mostrara normalmente*/
+}
+
+.salir-menu
+
+/*label de salida*/
+    {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    /*cubrira todo el ancho y alto disponible*/
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+#menu-desplegable:checked + .icono-menu + .menu + .salir-menu {
+    display: block;
+    /*Al momento de que el checkbox este activado y se muestre el menu, el label de salida se mostrara tambien*/
+}
+
+/*Estilos de la lista de navegación*/
+.menu ul,
+ol {
+    cursor: pointer;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+}
+
+.menu li:hover {
+    background-color: #f8f892;
+}
+
+.menu ul li {
+    position: relative;
+    padding: 10px 8px;
+    margin-top: -10px;
+}
+
+/*Enlaces del menú principal*/
+.menu ul li {
+    font-size: 25px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: black;
+    font-family: monospace;
+}
+
+/*estilos para la presentacion*/
+.presentacion {
+    text-align: center;
+    background-image: url(fondo.jpg);
+    height: 700px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+
+}
+
+.presentacion img {
+    margin-top: 380px;
+    width: 200px;
+    height: 200PX;
+    border-radius: 50%;
+}
+
+.presentacion h1 {
+    font-family: monospace;
+    font-size: 60px;
+    color: #ebdf7d;
+}
+
+.presentacion h3 {
+
+    font-family: monospace;
+    font-size: 30px;
+    color: #ebdf7d;
+    font-style: italic;
+}
+
+/*Estilos para la seccion historia*/
+.seccion-historia {
+    /*background: radial-gradient(circle, rgba(206, 162, 82, 0.71) 0%, rgba(222, 167, 93, 0.5) 80%, rgba(98, 41, 0, 0.38) 100%);*/
+    background: url(fondo-historia.jpg);
+    text-align: center;
+    margin: 30px;
+    height: auto;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+/*Estilos para la seccion ubicacion*/
+.seccion-ubicacion {
+    color: #ebdf7d;
+    background-color: #727272;
+    height: 490px;
+}
+.titulo-ubicacion {
+    text-align: center;
+}
+.seccion-ubicacion iframe {
+    border-radius: 5%;
+    margin-left: 60%;
+    margin-top: -375px;
+}
+
+.info-ubicacion {
+    margin-left: 30px;
+}
+
+.info-ubicacion h1,
+h3 {
+    padding: 10px;
+}
+
+.info-ubicacion p {
+    padding: 10px;
+}
+
+/*estilo para el carrusel de imagenes*/
+.carrusel {
+    margin-left: 360px;
+    margin-top: -100px;
+    border-radius: 5%;
+    width: 500px;
+    height: 300px;
+    overflow: hidden;
+}
+
+.carrusel ul {
+    display: flex;
+    width: calc(500px * 4);
+    /*Ancho total (número de imágenes)*/
+    animation: slide 20s infinite;
+    /*Duración del ciclo*/
+}
+
+.carrusel img {
+    width: 500px;
+    height: 300px;
+}
+
+
+
+/* animación del carrusel */
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(-350px);
+    }
+
+    50% {
+        transform: translateX(-700px);
+    }
+
+    75% {
+        transform: translateX(-1050px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+/*Estilos para la seccion de reseñas*/
+.seccion-reseñas {
+    margin-top: 30px;
+}
+
+.seccion-reseñas h1 {
+    text-align: center;
+}
+
+.formulario {
+    text-align: center;
+    padding: 10px;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 10px;
+    box-shadow: 2px 2px 5px rgb(0, 0, 0.9);
+    border-radius: 10px;
+}
+
+.formulario h3 {
+    font-size: 28px;
+    color: #ebdf7d;
+}
+
+.formulario label {
+    padding: 15px;
+    color: #ebdf7d;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.formulario .input1 {
+    width: 500px;
+    height: 30px;
+    border-radius: 5px;
+}
+
+.formulario .input2 {
+    width: 500px;
+    height: 100px;
+    border-radius: 5px;
+}
+
+.calificar {
+    display: flex;
+    direction: rtl;
+    justify-content: center;
+}
+
+.calificar input {
+    display: none;
+}
+
+.calificar label {
+    font-size: 2rem;
+    color: gray;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.calificar input:checked ~ label,
+/*funciona cuando se activa el checked*/
+.calificar label:hover,
+/*o cuando de pasa el mouse*/
+.calificar label:hover ~ label {
+    color: #f5c518;
+}
+
+.formulario button {
+    background-color: #ebdf7d;
+    padding: 5px;
+    border-radius: 5px;
+    font-family: monospace;
+    color: white;
+    border: none;
+    width: 100px;
+    cursor: pointer;
+}
+
+.enviado {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    z-index: 1000;
+}
+
+#boton:active + .enviado {
+    display: block;
+}
+
+.reseñas {
+    margin-top: 20px;
+    background-color: #727272;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 10px;
+    ;
+}
+
+.reseñas img {
+    margin-top: 20px;
+    margin-left: 10px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.reseñas h3 {
+    margin-top: -50px;
+    margin-left: 70px;
+}
+
+.reseñas p {
+    padding: 10px;
+    margin-left: 20px;
+}
+/*estilo para el pie de pagina*/
+footer {
+    margin-top: 30px;
+	background-color: #ebdf7d;
+	color: #fff;
+	padding:0%;
+	text-align: center;
+	bottom: 0;
+	width: 100%;
+	z-index: 1000;
+	left: 0;
+	right: 0;
+}
+
+ footer h4 {
+    padding: 20px;
+	font-family: 'Pacifico';
+	font-size: 20px;
+	color: #fff;
+
+}
+.contacto {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+.contacto p {
+    margin-left: 10px;
+}
+.contactanos {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.contactanos ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+.contactanos ul li {
+	display: flex;
+	align-items: center;
+	margin-bottom: 20px;
+}
+.contactanos img{
+    width: 30px;
+	height: 30px;
+	margin-right: 10px;
+}
+
+.contactanos ul li a {
+	text-decoration: none;
+	color: #fff;
+	font-size: 16px;
+	font-weight: bold;
+}
+.contactanos ul li a:hover {
+	color: rgb(0,0,0,0.79);
+}
+.redes-sociales img {
+	width: 30px;
+	height: 30px;
+	margin-right: 10px;
+	border-radius: 50%;
+	transition: width 0.5s, height 0.5s, transform 0.5s;
+}
+.redes-sociales img:hover {
+	box-shadow: 0 0 26px #ff000a;
+	transform: scale(1.5);
+}
+.redes-sociales ul li {
+	display: inline-block;
+	margin-right: 20px;
+}
+.redes-sociales ul li:last-child {
+	margin-right: 25;
+}
+.copy {
+	width: 100%;
+	clear: both;
+	text-align: center;
+	background-color:#ff8800 ;
+	color: #fff;
+}
+
+
+/*responsive telefono*/
+@media (max-width: 580px) {
+    .inicio h1 a {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    .inicio img {
+        width: 45px;
+        height: 45px;
+    }
+
+    .icono-menu img {
+        width: 45px;
+        height: 45px;
+    }
+
+    .menu {
+        width: 48%;
+        position: absolute;
+    }
+
+    .menu img {
+        width: 80px;
+
+    }
+
+    .iconos-menu img {
+        width: 25px;
+    }
+
+    .iconos-menu a li {
+        font-size: 20px;
+    }
+
+    .presentacion {
+        height: 500px;
+    }
+
+    .presentacion img {
+        width: 110px;
+        height: 110px;
+        margin-top: 70%;
+    }
+
+    .presentacion h1 {
+        font-size: 20px;
+    }
+    .presentacion h3 {
+        font-size: 15px;
+    }
+
+    .seccion-historia {
+        margin: 15px;
+        height: auto;
+    }
+
+    .seccion-ubicacion {
+        height: 370px;
+    }
+
+    .seccion-ubicacion h1,
+    h3,
+    p {
+        padding: 0px;
+    }
+
+    .seccion-ubicacion iframe {
+        margin-top: 0px;
+        width: 300px;
+        height: 200px;
+        margin: auto;
+    }
+
+    .carrusel {
+        display: none;
+    }
+
+    .formulario {
+        width: 300px;
+        margin: auto;
+    }
+
+    .formulario label {
+        width: 200px;
+    }
+
+    .formulario .input1 {
+        width: 200px;
+    }
+
+    .formulario .input2 {
+        width: 200px;
+    }
+    .reseñas {
+        width: 70%;
+        margin:auto;
+        margin-top: 20px;
+    }
+
+    footer {
+        width: auto;
+    }
+    .contactanos {
+        margin-left: 20px;
+    }
+
+}
+/*Responsive para tablet*/
+@media (min-width: 768px) and (max-width: 1024px){
+    .inicio h1 a {
+        font-size: 35px;
+        margin-bottom: 10px;
+    }
+
+    .inicio img {
+        margin-top: -5px;
+        width: 60px;
+        height: 60px;
+    }
+
+    .icono-menu img {
+        width: 60px;
+        height: 60x;
+    }
+    .menu {
+        width: 48%;
+        position: absolute;
+    }
+    .menu img {
+        width: 80px;
+
+    }
+
+    .iconos-menu img {
+        width: 25px;
+    }
+
+    .iconos-menu a li {
+        font-size: 20px;
+    }
+
+    .presentacion {
+        height: 500px;
+    }
+
+    .presentacion img {
+        width: 110px;
+        height: 110px;
+        margin-top: 330px;
+    }
+
+    .presentacion h1 {
+        font-size: 20px;
+    }
+    .presentacion h3 {
+        font-size: 15px;
+    }
+
+    .seccion-historia {
+        margin: 15px;
+        height: auto;
+    }
+
+    .seccion-ubicacion {
+        height: 370px;
+    }
+
+    .seccion-ubicacion h1,
+    h3,
+    p {
+        padding: 0px;
+    }
+
+    iframe {
+        margin-top: -7px;
+        width: 300px;
+        height: 200px;
+        
+    }
+    .carrusel {
+        display:;
+        width: 200px;
+        height: 120px;
+        margin-left: 30px;
+        margin-top: 50px;
+    }
+
+    .formulario {
+        width: ;
+        margin-left: 0px;
+        margin-right: 0;
+    }
+
+    .formulario label {
+        width: 200px;
+    }
+
+    .formulario .input1 {
+        width: 300px;
+    }
+
+    .formulario .input2 {
+        width: 300px;
+    }
+
+    .reseñas {
+        width: 87%;
+        margin: auto;
+        margin-top: 20px;
+    }
+
+    footer {
+        width: auto;
+    }
+    .contacto {
+        margin-left: 25%;
+    }
+    .redes-socilales {
+        margin-left: 25%;
+    }
+    .contactanos {
+        margin-left:;
+    }
+
+}
